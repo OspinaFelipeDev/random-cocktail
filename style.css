@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: plum;
+}
+
+
+@media (min-width: 1200px) { 
+    h1 {
+        margin-top: 10px;
+        margin-left: 500px;
+    }
+    
+    #cocktail-image {
+        height: 400px; /* Altura fija */
+        width: 400px; /* Ancho fijo */
+        object-fit: cover; /* Mantiene la proporción de la imagen */
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+        margin-left: 480px;
+        margin-top: 20px;
+    }
+
+    #cocktail-image:hover {
+        transform: scale(1.06);
+    }
+
+    #cocktail-name {
+        width: 100%; /* Ocupa todo el ancho del contenedor padre */
+        text-align: center; /* Centra el texto horizontalmente */
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        margin-top: 10px;
+    }
+    
+    #cocktail-ingredients {
+        position: absolute;
+        margin-top: -448px;
+        margin-left: 120px;
+        list-style: none;
+        color: #fff;
+        font-size: 20px; 
+    }
+
+    #cocktail-ingredients li {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 6px;
+        margin-bottom: 4px; /* Espacio reducido entre los ingredientes */
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease;
+    }
+
+    #cocktail-ingredients li:hover,
+    #cocktail-ingredients li:active {
+        transform: translateY(-2px);
+        background-color: #00bf72; /* Efecto hover */
+    }
+
+    #cocktail-instructions-container {
+        position: absolute;
+        width:300px;
+        margin-top: -448px;
+        margin-left: 900px;
+    }
+    
+    #cocktail-instructions {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 8px;
+        color: #fff;
+        font-size: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        margin-bottom: 6px;
+        transition: transform 0.2s ease;
+    }
+    
+    #cocktail-instructions:hover {
+        transform: translateY(-2px);
+        background-color: #00bf72;
+    }
+
+    button {
+        margin-left: 580px;
+        margin-top: 20px;
+        white-space: nowrap;
+        padding: 15px 30px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+    }
+    
+
+    } 
+
+
+
+
+
+
+
+/* Estilos para pantalla movil */
+
+@media (max-width:600px) {
+    body {
+        background-color: plum;
+        display: flex;
+        flex-direction: column; /* Los elementos estarán uno debajo del otro */
+        align-items: center;
+    }
+    h1 {
+        font-size: 20px;
+        margin-left: 20px;
+        white-space: nowrap;
+        margin-top: 13px;
+    }
+
+    #cocktail-image {
+        height: 300px; /* Altura fija */
+        width: 300px; /* Ancho fijo */
+        object-fit: cover; /* Mantiene la proporción de la imagen */
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+    
+    #cocktail-image:hover {
+        transform: scale(1.06);
+    }
+
+    #cocktail-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        margin-top: 10px;
+        min-height: 40px; /* Altura mínima para que no cambie la posición de la imagen */
+        margin-left: 20px;
+    }
+
+    #container-information {
+        font-size: 13px;
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    #cocktail-ingredients {
+        list-style-type: none; 
+        padding: 0;
+        margin: 0;
+        color: #fff;
+        font-size: 14px; 
+        text-align: left; 
+        max-width: 100px;
+        min-width: 160px; /* Ancho mínimo para evitar cambios grandes */
+        padding-right: 8px;
+        margin-left: 18px;
+    }
+    
+    #cocktail-ingredients li {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 6px;
+        margin-bottom: 4px; /* Espacio reducido entre los ingredientes */
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease;
+    }
+    
+    #cocktail-ingredients li:hover,
+    #cocktail-ingredients li:active {
+        transform: translateY(-2px);
+        background-color: #00bf72; /* Efecto hover */
+    }
+
+    #cocktail-instructions-container {
+        margin-right: 10px;
+    }
+    
+    #cocktail-instructions {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 8px;
+        color: #fff;
+        font-size: 14px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        margin-bottom: 6px;
+        transition: transform 0.2s ease;
+    }
+    
+    #cocktail-instructions:hover {
+        transform: translateY(-2px);
+        background-color: #00bf72;
+    }
+
+    button {
+        margin-left: 22px;
+        white-space: nowrap;
+        padding: 15px 30px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+    }
+
+    
+
+
+}
