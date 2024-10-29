@@ -132,8 +132,8 @@ body {
     }
 
     #cocktail-image {
-        height: 300px; /* Altura fija */
-        width: 300px; /* Ancho fijo */
+        height: 400px; /* Altura fija */
+        width: 400px; /* Ancho fijo */
         object-fit: cover; /* Mantiene la proporción de la imagen */
         border-radius: 15px;
         transition: transform 0.3s ease;
