@@ -132,12 +132,12 @@ body {
     }
 
     #cocktail-image {
-        height: 350px; /* Altura fija */
-        width: 350px; /* Ancho fijo */
+        height: 300px; /* Altura fija */
+        width: 300px; /* Ancho fijo */
         object-fit: cover; /* Mantiene la proporción de la imagen */
         border-radius: 15px;
         transition: transform 0.3s ease;
-        margin-left: 30px;
+        margin-left: 10px;
         margin-top: 20px;
     }
     
