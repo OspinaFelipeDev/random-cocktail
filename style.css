@@ -137,7 +137,7 @@ body {
         object-fit: cover; /* Mantiene la proporción de la imagen */
         border-radius: 15px;
         transition: transform 0.3s ease;
-        margin-left: 10px;
+        margin-left: 35px;
         margin-top: 20px;
     }
     
