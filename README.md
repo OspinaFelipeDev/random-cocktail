@@ -17,9 +17,9 @@ Esta aplicación consume datos de la [TheCocktailDB API](https://www.thecocktail
 
 ## Tecnologías Utilizadas
 
-- HTML5
-- Javascript
-- CSS
+- HTML5 11.4%
+- Javascript 22.4%
+- CSS 66.2%
 
 
 ## Licencia
