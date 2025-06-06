@@ -31,7 +31,6 @@ h3 {
     color: #b83b5e;
     /* Color vino / cóctel */
     margin-bottom: 3rem;
-    margin-top: 1.2rem;
     font-size: 2.5rem;
 }
 
@@ -71,8 +70,6 @@ h3 {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-
 
 
 #cocktail-ingredients,
@@ -116,11 +113,6 @@ h3 {
     margin-bottom: 1.5rem;
 }
 
-
-
-
-
-
 /* Botón moderno */
 button {
     font-family: 'Poppins', sans-serif;
@@ -139,40 +131,134 @@ button:hover {
     background-color: #e04863;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+.display-desktop {
+    display: none;
+}
+
+.footer {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.footer .icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s;
+}
+
+.footer .icon:hover {
+  transform: scale(1.1);
+}
+
+.personal-logo {
+  width: 40px;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.icon {
+  font-size: 3rem;
+  color: #333333; /* Color oscuro visible */
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+
+.icon:hover {
+  transform: scale(1.2);
+  color: #25d366; /* WhatsApp verde */
+}
+
+.footer-links .fa-linkedin:hover {
+  color: #0077b5; /* LinkedIn azul */
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
     #cocktail-image-container img {
         max-width: 70%;
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     #cocktail-content-row {
-        display: flex;
-        justify-content: space-between; /* cambia de center a space-between */
-        align-items: flex-start;
-        gap: 40px; /* puedes aumentar el espacio entre columnas */
-        width: 100%;
-        margin-top: 20px;
-        flex-wrap: nowrap; /* evita que salten de línea */
-        text-align: left; /* importante para que el texto esté alineado a la izquierda */
+        display: none;
     }
 
-    #cocktail-ingredients,
-    #cocktail-instructions-container {
-        max-width: 45%;
+    #cocktail-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1100px;
         width: 100%;
-        align-items: flex-start; /* alinea contenido al inicio */
-        text-align: left; /* alinea texto a la izquierda */
     }
 
     #cocktail-image-container {
-        max-width: 300px;
-        width: 100%;
+        display: none;
     }
 
-    #cocktail-image-container img {
-        max-height: 350px;
-        object-fit: cover;
+    .display-desktop {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        padding: 2rem;
         width: 100%;
+        max-width: 1400px;
+    }
+
+    .desktop-ingredients,
+    .desktop-instructions-container {
+        flex: 1;
+        max-width: 300px;
+        padding: 20px;
+        text-align: center;
+        font-size: 2rem;
+        line-height: 1.5;
+        list-style: none;
+        background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente blanco */
+        backdrop-filter: blur(6px); /* Efecto vidrio */
+        -webkit-backdrop-filter: blur(6px); /* Soporte Safari */
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .desktop-ingredients:hover,
+    .desktop-instructions-container:hover {
+        transform: translateY(-5px); /* Efecto hover */
+    }
+
+    .desktop-image-container {
+        flex: 1;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .desktop-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
     }
 }

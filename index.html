@@ -1,32 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Cocktail Image</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+   <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+
+
+  </head>
+  <body>
     <h1>Random Cocktail Image</h1>
     <div id="cocktail-container">
-  <div id="cocktail-image-container">
-    <img id="cocktail-image" src="" alt="Random Cocktail">
-  </div>
-  <p id="cocktail-name"></p>
-  
-  <!-- NUEVO CONTENEDOR PARA LA DISTRIBUCIÓN EN DESKTOP -->
-  <div id="cocktail-content-row">
-    <ul id="cocktail-ingredients"></ul>
-    <div id="cocktail-instructions-container">
-      <p id="cocktail-instructions"></p>
+      <div id="cocktail-image-container">
+        <img id="cocktail-image" src="" alt="Random Cocktail" />
+      </div>
+      <p id="cocktail-name"></p>
+
+      <!-- NUEVO CONTENEDOR PARA LA DISTRIBUCIÓN EN DESKTOP -->
+      <div id="cocktail-content-row">
+        <ul id="cocktail-ingredients"></ul>
+        <div id="cocktail-instructions-container">
+          <p id="cocktail-instructions"></p>
+        </div>
+      </div>
+
+      <div class="display-desktop">
+        <ul class="desktop-ingredients"></ul>
+        <div class="desktop-image-container">
+          <img class="desktop-image" src="" alt="Random Cocktail" />
+        </div>
+        <div class="desktop-instructions-container">
+          <p class="desktop-instructions"></p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-
-   
     <button id="new-cocktail-button">Get a new random cocktail🍹</button>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Sitio creado por: <strong>Andrés Ospina</strong></p>
+        <div class="footer-links">
+          <a href="https://wa.me/3134802365" target="_blank" title="WhatsApp">
+  <i class="fab fa-whatsapp icon"></i>
+</a>
+<a href="https://www.linkedin.com/in/andr%C3%A9s-felipe-cubillos-ospina-9619962a3/" target="_blank" title="LinkedIn">
+  <i class="fab fa-linkedin icon"></i>
+</a>
+
+        </div>
+        <img
+          src="assets/img/nuevo-logo.png"
+          alt="Logo personal"
+          class="personal-logo"
+        />
+      </div>
+    </footer>
+
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
