@@ -10,8 +10,8 @@ html {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Estilos base */
 body {
+    animation: fadeIn 1s ease-in-out;
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
     color: #333;
@@ -21,6 +21,18 @@ body {
     align-items: center;
     padding: 20px;
     text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h1,
@@ -69,6 +81,11 @@ h3 {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#cocktail-image,
+.desktop-image {
+    transition: opacity 0.5s ease-in-out;
 }
 
 
@@ -136,62 +153,59 @@ button:hover {
 }
 
 .footer {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(6px);
-  padding: 2rem;
-  text-align: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(6px);
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.footer-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.footer-links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.footer .icon {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.2s;
-}
-
-.footer .icon:hover {
-  transform: scale(1.1);
-}
-
-.personal-logo {
-  width: 40px;
-  height: auto;
-  margin-top: 1rem;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .icon {
-  font-size: 3rem;
-  color: #333333; /* Color oscuro visible */
-  margin: 0 0.5rem;
-  transition: transform 0.3s ease;
+    font-size: 3rem;
+    color: #333333;
+    margin: 0 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
-
 
 .icon:hover {
-  transform: scale(1.2);
-  color: #25d366; /* WhatsApp verde */
+    transform: scale(1.2);
 }
 
-.footer-links .fa-linkedin:hover {
-  color: #0077b5; /* LinkedIn azul */
+.fa-whatsapp:hover {
+    color: #25d366;
 }
 
+.footer-logos .fa-linkedin:hover {
+    color: #0077b5;
+}
+
+.personal-logo {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personal-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
 
 @media (min-width: 768px) and (max-width: 1023px) {
     #cocktail-image-container img {
@@ -235,9 +249,12 @@ button:hover {
         font-size: 2rem;
         line-height: 1.5;
         list-style: none;
-        background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente blanco */
-        backdrop-filter: blur(6px); /* Efecto vidrio */
-        -webkit-backdrop-filter: blur(6px); /* Soporte Safari */
+        background: rgba(255, 255, 255, 0.7);
+        /* Fondo semitransparente blanco */
+        backdrop-filter: blur(6px);
+        /* Efecto vidrio */
+        -webkit-backdrop-filter: blur(6px);
+        /* Soporte Safari */
         border-radius: 16px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s;
@@ -245,7 +262,8 @@ button:hover {
 
     .desktop-ingredients:hover,
     .desktop-instructions-container:hover {
-        transform: translateY(-5px); /* Efecto hover */
+        transform: translateY(-5px);
+        /* Efecto hover */
     }
 
     .desktop-image-container {

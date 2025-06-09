@@ -11,14 +11,19 @@ function fetchRandomCocktail() {
             const cocktailName = cocktail.strDrink;
             const cocktailInstructions = cocktail.strInstructions;
 
-            // Actualizar contenedor principal
             const img = document.getElementById('cocktail-image');
             const name = document.getElementById('cocktail-name');
             const instructions = document.getElementById('cocktail-instructions');
             const ingredientsList = document.getElementById('cocktail-ingredients');
 
+            // Aplicar transición de opacidad
+            img.style.opacity = 0;
+            img.onload = () => {
+                img.style.opacity = 1;
+            };
             img.src = cocktailImage;
             img.alt = cocktailName;
+
             name.textContent = cocktailName;
             ingredientsList.innerHTML = '';
 
@@ -35,17 +40,22 @@ function fetchRandomCocktail() {
 
             instructions.textContent = cocktailInstructions;
 
-            // Actualizar también el display-desktop
+            // Imagen para versión desktop
             const desktopImg = document.querySelector('.desktop-image');
             const desktopInstructions = document.querySelector('.desktop-instructions');
             const desktopIngredients = document.querySelector('.desktop-ingredients');
 
             if (desktopImg && desktopInstructions && desktopIngredients) {
+                // Transición también para desktop
+                desktopImg.style.opacity = 0;
+                desktopImg.onload = () => {
+                    desktopImg.style.opacity = 1;
+                };
                 desktopImg.src = cocktailImage;
                 desktopImg.alt = cocktailName;
+
                 desktopInstructions.textContent = cocktailInstructions;
 
-                // Limpiar y agregar ingredientes
                 desktopIngredients.innerHTML = '';
                 for (let i = 1; i <= 15; i++) {
                     const ingredient = cocktail[`strIngredient${i}`];
@@ -61,5 +71,6 @@ function fetchRandomCocktail() {
         })
         .catch(error => console.error('Error fetching the random cocktail:', error));
 }
+
 
 fetchRandomCocktail();
